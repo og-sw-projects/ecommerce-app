@@ -1,6 +1,6 @@
 # E-Commerce Microservices Application
 
-This is a simple e-commerce application built using a microservices architecture with Spring Boot and Spring Cloud. It includes unit testing and follows a modular design for maintainability and scalability.
+This is a simple e-commerce application built using a microservices architecture with Spring Boot and Spring Cloud. The project is fully containerized using Docker and orchestrated with Docker Compose, making it easy to run and manage all services in a consistent environment. It includes unit testing and follows a modular design for maintainability and scalability.
 
 ## Microservices Included
 
@@ -17,6 +17,7 @@ This is a simple e-commerce application built using a microservices architecture
 - Service Discovery (Eureka)
 - API routing via Spring Cloud Gateway
 - Unit tests included
+- Dockerized with Docker Compose
 
 ## Installation Guide
 
@@ -24,27 +25,23 @@ This is a simple e-commerce application built using a microservices architecture
 
 - Java 24+
 - Maven
+- Docker & Docker Compose
 
-### Steps
+### Running the Application
 
-1. **Clone the repo**
+1. **Clone the repository**
    ```bash
    git clone https://github.com/og-sw-projects/ecommerce-app.git
    cd ecommerce-app
    ```
-2. **Run Eureka Server**
+2. **Build the services**
    ```bash
-   cd eurekaserver
-   ./mvnw spring-boot:run
+   ./mvnw clean package -DskipTests
    ```
-3. **Run API Gateway**
+3. **Start all services using Docker Compose**
    ```bash
-   cd api-gateway
-   ./mvnw spring-boot:run
+   docker-compose up --build
    ```
-4. **Run each microservice**
-   ```bash
-   cd product-service && ./mvnw spring-boot:run
-   cd order-service && ./mvnw spring-boot:run
-   cd inventory-service && ./mvnw spring-boot:run
-   ```
+4. **Access the services**
+- **Eureka Dashboard**: http://localhost:8761
+   
