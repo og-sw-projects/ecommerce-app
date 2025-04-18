@@ -15,6 +15,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="apigateway" target="18" />
+      <module name="ecommerce-app" target="1.5" />
       <module name="eurekaserver" target="18" />
       <module name="inventoryservice" target="18" />
       <module name="orderservice" target="18" />

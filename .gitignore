@@ -1,0 +1,26 @@
+# Ignore IntelliJ IDEA project files
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Ignore Maven build output directories
+target/
+
+# Keep Maven wrapper jar file
+!.mvn/wrapper/maven-wrapper.jar
+
+# Exclude target directories within source folders but not the source code itself
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# Ignore Maven wrapper files (not typically necessary, but safe to include)
+.mvn/
+
+# Ignore other build artifacts like generated files
+*.log
+*.tmp
+
+# Ignore OS-specific files (optional, but good practice)
+.DS_Store
+Thumbs.db
